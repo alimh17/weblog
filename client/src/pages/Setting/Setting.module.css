@@ -1,0 +1,212 @@
+.header {
+  width: 100%;
+  height: 25rem;
+
+  background-image: radial-gradient(
+      circle at 29% 55%,
+      hsla(329, 0%, 99%, 0.05) 0%,
+      hsla(329, 0%, 99%, 0.05) 4%,
+      transparent 4%,
+      transparent 44%,
+      transparent 44%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 85% 89%,
+      hsla(329, 0%, 99%, 0.05) 0%,
+      hsla(329, 0%, 99%, 0.05) 51%,
+      transparent 51%,
+      transparent 52%,
+      transparent 52%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 6% 90%,
+      hsla(329, 0%, 99%, 0.05) 0%,
+      hsla(329, 0%, 99%, 0.05) 53%,
+      transparent 53%,
+      transparent 64%,
+      transparent 64%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 35% 75%,
+      hsla(329, 0%, 99%, 0.05) 0%,
+      hsla(329, 0%, 99%, 0.05) 6%,
+      transparent 6%,
+      transparent 98%,
+      transparent 98%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 56% 75%,
+      hsla(329, 0%, 99%, 0.05) 0%,
+      hsla(329, 0%, 99%, 0.05) 16%,
+      transparent 16%,
+      transparent 23%,
+      transparent 23%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 42% 0%,
+      hsla(329, 0%, 99%, 0.05) 0%,
+      hsla(329, 0%, 99%, 0.05) 3%,
+      transparent 3%,
+      transparent 26%,
+      transparent 26%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 29% 28%,
+      hsla(329, 0%, 99%, 0.05) 0%,
+      hsla(329, 0%, 99%, 0.05) 51%,
+      transparent 51%,
+      transparent 75%,
+      transparent 75%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 77% 21%,
+      hsla(329, 0%, 99%, 0.05) 0%,
+      hsla(329, 0%, 99%, 0.05) 35%,
+      transparent 35%,
+      transparent 55%,
+      transparent 55%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 65% 91%,
+      hsla(329, 0%, 99%, 0.05) 0%,
+      hsla(329, 0%, 99%, 0.05) 46%,
+      transparent 46%,
+      transparent 76%,
+      transparent 76%,
+      transparent 100%
+    ),
+    linear-gradient(45deg, rgb(83, 91, 235), rgb(76, 11, 174));
+}
+
+.header > span > button {
+  border: 0;
+  outline: 0;
+  position: absolute;
+  top: 55%;
+  right: 5%;
+  width: 15rem;
+  padding: 0.8rem !important;
+  border-radius: 8px;
+  background-color: transparentّ;
+}
+
+.header > span > input {
+  position: absolute;
+  top: 55%;
+  right: 5%;
+  width: 15rem;
+  padding: 0.8rem !important;
+  border-radius: 8px;
+  z-index: 100;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.header > div {
+  width: 100%;
+  height: 10rem;
+  position: relative;
+  top: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrraper {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary-4);
+}
+
+.imageWrraper > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.iconWrraper {
+  position: relative;
+  bottom: 100%;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  align-items: center;
+  background-color: rgba(70, 70, 70, 0.397);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 0.8 ease;
+  opacity: 0;
+}
+
+.iconWrraper:hover {
+  opacity: 1;
+}
+
+.iconWrraper > input {
+  background-color: skyblue;
+  width: 20%;
+  position: relative;
+  top: 15%;
+  z-index: 150;
+  opacity: 0;
+}
+
+.iconWrraper > input::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+.camera {
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: block;
+}
+
+.navigate {
+  margin-top: 6rem !important;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigate > ul {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary-3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  margin: 1rem 0 !important;
+}
+
+.navigate > ul > li {
+  list-style: none;
+  margin: 0 1rem !important;
+  padding: 1rem !important;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navigate > ul > li > svg {
+  font-size: 1.5rem;
+  margin: 0 1rem !important;
+  color: gray;
+}

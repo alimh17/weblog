@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Iransans";
+  src: url("../font/IranianSans.woff");
+  src: url("../font/IranianSans.woff2");
+  src: url("../font/IranianSans.ttf");
+  font-weight: 400;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+:root {
+  --color-primary-1: #ff87ca;
+  --color-primary-2: #ffc4e1;
+  --color-primary-3: #eaeaea;
+  --color-primary-4: #eed7ce;
+}
+
+html,
+body {
+  font-family: "Iransans", sans-serif !important;
+  direction: rtl;
+}

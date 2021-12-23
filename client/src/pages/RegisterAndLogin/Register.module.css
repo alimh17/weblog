@@ -1,0 +1,129 @@
+.right {
+  height: 100vh;
+  background-image: url("http://localhost:3000/images/plant.jpg");
+  background-size: cover;
+}
+
+.items {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.login,
+.register {
+  color: #333;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+  margin: 1rem;
+  padding: 1rem !important;
+}
+
+.active {
+  background-color: #005120;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.active:hover {
+  background-color: #007e32e3;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("http://localhost:3000/images/plant.jpg");
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 80%;
+}
+
+.form > div > label {
+  width: 80%;
+  text-align: right;
+}
+
+.form input {
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  width: 80%;
+}
+
+.form button[type="submit"] {
+  border: 0;
+  outline: 0;
+  padding: 1rem !important;
+  width: 40%;
+  border-radius: 20px;
+  background-color: #005120;
+  color: #fff;
+  transition: all 0.5s ease !important;
+  font-size: 18px;
+}
+
+.form button[type="submit"]:hover {
+  width: 80%;
+  background-color: #007e32e3;
+}
+
+.btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  outline: 0;
+  padding: 1rem !important;
+  width: 40%;
+  border-radius: 20px;
+  background-color: #007e32e3;
+  color: #fff;
+  transition: all 0.5s ease !important;
+  font-size: 18px;
+}
+
+.form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form > div > span {
+  position: relative;
+  bottom: 40%;
+  right: 38%;
+  width: 2.5rem;
+  height: 2rem;
+  padding: 1.2rem 0 !important;
+  background-color: #007e32e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 0 0 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.icon {
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}

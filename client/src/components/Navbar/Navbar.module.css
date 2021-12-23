@@ -1,0 +1,163 @@
+.row {
+  background-color: var(--color-primary-3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.userInfo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userInfo > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+
+.userLinkDark > img,
+.userLinkLight > img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.userLinkDark,
+.userLinkLight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  text-decoration: none;
+}
+
+.userLinkDark {
+  color: #fff;
+}
+
+.userLinkDark:hover {
+  color: #fff;
+}
+.userLinkLight {
+  color: #333;
+}
+.userLinkLight:hover {
+  color: #333;
+}
+
+.setting {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: rebeccapurple;
+}
+
+.logoContainer > span {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logoContainer > span > img {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.addPost > span {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.plusIcon {
+  font-size: 2rem;
+  color: rebeccapurple;
+}
+
+.addPostLinkLight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+.addPostLinkLight:hover {
+  color: #2b2b2b;
+}
+
+.addPostLinkDark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.addPostLinkDark:hover {
+  color: #fff;
+}
+
+.settingOption {
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
+  background-color: rgb(252, 251, 251, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  width: 8rem;
+  z-index: 150;
+  border: 1px solid var(--color-primary-1);
+}
+
+.settingOption > ul {
+  list-style: none;
+}
+
+.settingOption > ul > a > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.2rem !important;
+  cursor: pointer;
+}
+
+.barWrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barWrapper > svg {
+  font-size: 2rem;
+  color: rebeccapurple;
+}
+
+.barsOption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: orange;
+  width: 50%;
+  height: 15rem;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+  }
+}

@@ -1,0 +1,52 @@
+.container {
+  position: absolute;
+  width: 100% !important;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.658);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+  display: none;
+}
+
+.container > div {
+  width: 50%;
+  height: 70%;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container > span {
+  position: relative;
+  left: 48%;
+  bottom: 13rem;
+  z-index: 400;
+}
+.container > span > svg {
+  font-size: 2rem;
+  color: red;
+  cursor: pointer;
+}
+
+.form > textarea {
+  resize: none;
+}
+.form > textarea,
+.form > input {
+  outline: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container > div {
+    width: 100%;
+    margin-right: 1.5rem !important;
+  }
+  .container > span {
+    left: 85%;
+  }
+}
