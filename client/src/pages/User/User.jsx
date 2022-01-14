@@ -1,13 +1,9 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  BsFillBookmarkPlusFill,
-  BsPlus,
-  BsThreeDotsVertical,
-} from "react-icons/bs";
+import { BsFillBookmarkPlusFill, BsThreeDotsVertical } from "react-icons/bs";
 import { FaTrash } from "react-icons/fa";
 import { useToasts } from "react-toast-notifications";
 
@@ -15,11 +11,10 @@ import {
   getUserPostAction,
   userDeletePostAction,
 } from "../../action/getUserPostsAction";
-import Navbar from "../../components/Navbar/Navbar";
 import { URL } from "../../utils/config.json";
 
 import style from "./User.module.css";
-import { Link } from "react-router-dom";
+import AllPosts from "../../components/AllPosts/AllPosts";
 
 const User = () => {
   const [profile, setProfile] = useState(null);
@@ -37,22 +32,7 @@ const User = () => {
   return (
     <Container dir="rtl" fluid>
       <Row>
-        <Col md="4" className={style.right}>
-          <article className={style.article}>
-            <img
-              alt="profile"
-              src="https://i.pinimg.com/564x/0e/64/58/0e64589e12b9c7cca0e92ff099fcbd4a.jpg"
-            />
-            <input type="text" value="i love music and football" />
-            <ul>
-              <li>music</li>
-              <li>football</li>
-              <li>fashion</li>
-              <li>song</li>
-            </ul>
-          </article>
-        </Col>
-        <Col md="8" className={style.left}>
+        <Col md="12" className={style.left}>
           <Container dir="rtl">
             <Row>
               {data.length > 0 ? (
@@ -119,18 +99,12 @@ const User = () => {
                 ))
               ) : (
                 <div className={style.notPost}>
-                  <h2 className={dark && "text-light"}>هیچ پستی وجود ندارد</h2>
-                  <Link
-                    to="/add_post"
-                    className={`${
-                      dark && "text-light text-decoration-underline"
-                    } text-decoration-none fs-5`}
-                  >
-                    پست جدید
-                    <span>
-                      <BsPlus />
-                    </span>
-                  </Link>
+                  <video
+                    src={process.env.PUBLIC_URL + "/images/Like.mp4"}
+                    autoPlay
+                    loop
+                  />
+                  <h4 className={dark && "text-light"}>هیچ پستی وجود ندارد</h4>
                 </div>
               )}
             </Row>

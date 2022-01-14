@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap");
+
+.section {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.timeComponent {
+  height: 14rem;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #d49dff, #f5cef5);
+  margin: 1rem !important;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  box-shadow: -5px 8px 5px gray;
+}
+
+.time {
+  grid-area: 2 / 2 / 6 /6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6d5c84;
+}
+.hourse {
+  font-size: 5rem;
+  font-family: "Titillium Web", sans-serif !important;
+}
+
+.min {
+  font-size: 4rem;
+  font-family: "Titillium Web", sans-serif !important;
+}
+
+.time span {
+  margin: 0 0.5rem !important;
+  font-size: 1.5rem;
+}
+
+.week {
+  grid-area: 1 / 2 / 2 /6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.week p {
+  font-size: 1.5rem;
+  color: #6d5c84;
+}
+
+.month {
+  grid-area: 1 / 1 / 6 /2;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #6d5c84;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+}
+
+.IdeaContainer,
+.makerContainer {
+  height: 14rem;
+  border-radius: 20px;
+  margin: 1rem !important;
+  font-size: 1.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #95aeff;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: -5px 8px 5px gray;
+  transition: all 0.5s ease;
+}
+
+.IdeaContainer img {
+  width: 50%;
+  height: 70%;
+}
+
+.IdeaContainer span {
+  position: relative;
+  bottom: 0.5rem;
+  color: #fff;
+}
+
+.makerContainer {
+  background-color: #dcc7cf;
+}
+
+.makerContainer > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.section > form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Title,
+.desc,
+.file {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Title > label,
+.desc > label,
+.file > label {
+  width: 80%;
+  font-size: 0.8rem;
+}
+.Title > input,
+.desc > input,
+.file > div > input {
+  width: 80%;
+  height: 2rem;
+  border: 1px solid gray;
+  outline: 0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.Title > span,
+.desc > span,
+.file > span {
+  width: 2rem;
+  height: 2rem;
+  background-color: rebeccapurple;
+  position: relative;
+  bottom: 2rem;
+  right: 8rem;
+  border-radius: 8px 0 0 8px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file > div > input::file-selector-button {
+  position: relative;
+  right: 0.5rem;
+  opacity: 0;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.buttonContainer > button {
+  width: 50%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem !important;
+  justify-self: center;
+  background-color: rebeccapurple;
+  border-radius: 8px;
+  color: #fff;
+  margin: auto auto;
+}
+
+.illustration {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 33% 67% 54% 46% / 50% 46% 54% 50%;
+}
+
+@media screen and (max-width: 1100px) {
+  .illustration {
+    width: 8rem;
+    height: 8rem;
+  }
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+
+  .hourse {
+    font-size: 4rem;
+  }
+  .min {
+    font-size: 3rem;
+  }
+
+  .week p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .hourse {
+    font-size: 3rem;
+  }
+  .min {
+    font-size: 2rem;
+  }
+
+  .IdeaContainer,
+  .timeComponent,
+  .makerContainer {
+    height: 10rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section > form {
+    width: 100%;
+  }
+
+  .Title > span,
+  .desc > span,
+  .file > span {
+    right: 40%;
+  }
+
+  .Title > input,
+  .desc > input,
+  .file > div {
+    width: 80%;
+  }
+  .file > div > input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .section > form {
+    height: 120vh;
+  }
+  .section > h3 {
+    padding-top: 10rem !important;
+  }
+}

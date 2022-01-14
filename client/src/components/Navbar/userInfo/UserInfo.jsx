@@ -12,7 +12,7 @@ const UserInfo = () => {
   return (
     <span className="mx-4">
       <Link
-        to="/user"
+        to="/user/dashboard"
         className={light ? style.userLinkDark : style.userLinkLight}
       >
         <img

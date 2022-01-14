@@ -37,7 +37,7 @@ const LoginMobile = ({ actived, setActived, setShowPass, showPass }) => {
           });
         })
         .catch((err) => {
-          if (err.message.slice(err.message.length - 3 == 404)) {
+          if (err.message.slice(err.message.length - 3 === 404)) {
             addToast("ایمیل یا رمز عبور صحیح نمی باشد", {
               appearance: "error",
               autoDismiss: true,

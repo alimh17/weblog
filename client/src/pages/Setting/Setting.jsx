@@ -42,20 +42,20 @@ const Setting = () => {
             <h1>
               {profile.username !== "" ? profile.username : "ali mohamaid"}
             </h1>
-            {/* <ul>
+            <ul>
               <li>
-                دوستان
+                <p className="d-none d-sm-flex">دوستان</p>
                 <FaUserFriends />
               </li>
               <li>
-                پست ها
+                <p className="d-none d-sm-flex">پست ها</p>
                 <BsFillSignpostSplitFill />
               </li>
               <li onClick={(e) => setDisplayModal(true)}>
-                تغییر مشخصات
+                <p className="d-none d-sm-flex">تغییر مشخصات</p>
                 <GrUserSettings />
               </li>
-            </ul> */}
+            </ul>
           </Col>
         </Row>
       </Container>

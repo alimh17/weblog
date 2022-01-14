@@ -41,7 +41,7 @@ const RegisterMobile = ({
           });
         })
         .catch((err) => {
-          if (err.message.slice(err.message.length - 3) == 422) {
+          if (err.message.slice(err.message.length - 3) === 422) {
             addToast("کاربری با این ایمیل ثبت شده است", {
               appearance: "error",
               autoDismiss: true,

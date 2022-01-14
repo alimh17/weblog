@@ -23,7 +23,7 @@ exports.NewPost = async (req, res) => {
             post: {
               _id: new mongoose.Types.ObjectId(),
               title: req.body.title,
-              desc: req.body.title,
+              desc: req.body.desc,
               file: req.file.path,
             },
           },

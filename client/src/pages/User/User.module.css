@@ -117,17 +117,37 @@
 .notPost {
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin: 1rem 0 !important;
+  height: 90vh;
 }
 
-.notPost > h2 {
+.notPost > h4 {
   width: 25rem;
-  background-color: rgba(158, 158, 158, 0.479);
   backdrop-filter: blur(8px);
   padding: 1rem !important;
   text-align: center;
   border-radius: 8px;
-  color: #555;
+  color: #333;
+}
+
+.notPost video {
+  width: 35rem;
+  height: 26.2rem;
+  border-radius: 27% 73% 46% 54% / 50% 52% 48% 50%;
+}
+
+@media screen and (max-width: 1000px) {
+  .notPost video {
+    width: 30rem;
+    height: 22.5rem;
+    border-radius: 27% 73% 46% 54% / 50% 52% 48% 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .notPost video {
+    width: 20rem;
+    height: 15rem;
+    border-radius: 27% 73% 46% 54% / 50% 52% 48% 50%;
+  }
 }
