@@ -94,6 +94,7 @@ exports.getAllUsers = async (req, res) => {
   let data = [];
 
   const userFilter = _.filter(user, (el) => el.email !== email);
+
   userFilter.forEach((item, index) => {
     if (item.profile.length > 0) {
       item.profile.map((el) => {
@@ -122,17 +123,51 @@ exports.addFreind = async (req, res) => {
     }
   );
 
-  const friends = _.uniqWith(user.friends, _.isEqual);
+  user.save();
+  res.status(200).json("success");
+};
+
+exports.removeFreind = async (req, res) => {
+  const id = req.body.data[2];
+  const decode = decoded(req.body.Token);
+  const { email } = decode.data.data;
+  const friend = await User.findById(id);
+
+  const user = await User.findOne({ email });
+
+  const filterFriends = user.friends.filter((el) => el.email !== friend.email);
 
   await User.findOneAndUpdate(
     { email },
     {
       $set: {
-        friends,
+        friends: filterFriends,
       },
     }
   );
 
   user.save();
   res.status(200).json("success");
+};
+
+exports.getAllFriends = async (req, res) => {
+  const decode = decoded(req.body.data);
+  const { email } = decode.data.data;
+  const user = await User.findOne({ email });
+
+  res.status(200).json({ success: true, data: user.friends });
+};
+
+exports.getAllPostFriends = async (req, res) => {
+  const decode = decoded(req.body.data);
+  const { email } = decode.data.data;
+  const user = await User.findOne({ email });
+
+  const posts = [];
+
+  user.friends.map((item) => {
+    posts.push(item.post);
+  });
+
+  res.status(200).json({ success: true, data: posts });
 };
