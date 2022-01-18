@@ -2,11 +2,12 @@ import React from "react";
 import { useEffect } from "react";
 import { Container, Col, Row } from "react-bootstrap";
 
-import style from "./addPost.module.css";
 import Time from "./components/Time";
 import Form from "./components/Form";
 import Idea from "./components/Idea";
 import Maker from "./components/Maker";
+
+import style from "./addPost.module.css";
 
 const AddPost = () => {
   useEffect(() => {
@@ -31,12 +32,7 @@ const AddPost = () => {
             </Row>
           </Container>
         </Col>
-        <Col md="6" sm="12" className="my-5 ">
-          <section className={style.section}>
-            <Form />
-          </section>
-        </Col>
-        <Col md="6" sm="12" className="my-5 ">
+        <Col md="12" sm="12" className="my-5 ">
           <section className={style.section}>
             <Form />
           </section>

@@ -20,7 +20,7 @@ const Navbar = () => {
   const profile = useSelector((state) => state.profile);
 
   return (
-    <Container dir="rlt" fluid>
+    <Container dir="rlt" fluid className={style.navContianer}>
       <Row className={style.row}>
         <Col>
           <div className={`${style.userInfo} d-md-flex d-none `}>

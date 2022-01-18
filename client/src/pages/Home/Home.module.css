@@ -1,3 +1,13 @@
+.right {
+  margin-top: 5rem !important;
+  position: fixed;
+  right: 0;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .postImg {
   width: 100%;
   height: 25rem;
@@ -18,4 +28,88 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main {
+  margin-top: 5rem !important;
+}
+
+.optionBTN {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem 0.5rem !important;
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.optionBTN > svg {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.option {
+  background-color: rgba(153, 153, 153, 0.541);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: absolute;
+  right: 15%;
+  top: 5%;
+  width: 10rem;
+  height: 7rem;
+  border-radius: 8px;
+}
+
+.option > ul {
+  text-decoration: none;
+}
+.option > ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0.5rem !important;
+}
+
+.deleteIcon > svg {
+  font-size: 20px;
+  color: red;
+  padding: 0.5rem;
+}
+
+.profileImg {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin: 0.5rem !important;
+  cursor: pointer;
+}
+
+.options {
+  cursor: pointer;
+  margin: 0 1rem !important;
+}
+
+@media screen and (max-width: 576px) {
+  .main {
+    margin-top: 0 !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    margin-top: 0 !important;
+  }
+
+  .right > div > h5 {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .addFriendBtn {
+    font-size: 14px;
+  }
 }

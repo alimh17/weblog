@@ -25,4 +25,5 @@ html,
 body {
   font-family: "Iransans", sans-serif !important;
   direction: rtl;
+  overflow-y: scroll;
 }

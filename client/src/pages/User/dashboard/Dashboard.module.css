@@ -5,6 +5,13 @@
   overflow-x: hidden;
   border-radius: 8px 0 0 8px;
   transition: width 0.5s ease;
+  margin-top: 5rem !important;
+  position: fixed;
+  z-index: 999;
+}
+
+.main {
+  margin-top: 5rem !important;
 }
 
 .profile {

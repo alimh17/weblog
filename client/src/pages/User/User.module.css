@@ -1,5 +1,5 @@
-.right {
-  height: 90vh;
+.container {
+  overflow-y: hidden;
 }
 
 .article {

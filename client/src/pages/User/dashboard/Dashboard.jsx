@@ -18,6 +18,16 @@ const Dashboard = () => {
   return (
     <Container dir="rtl" fluid>
       <Row>
+        <Col md={resize ? "1" : "3"}></Col>
+        <Col md={resize ? "11" : "9"} sm="9" className={`${style.main} md-4 `}>
+          {active.activeLink === 1 ? (
+            <AddPost />
+          ) : active.activeLink === 2 ? (
+            <User />
+          ) : (
+            ""
+          )}
+        </Col>
         <Col
           md={resize ? "1" : "3"}
           sm="3"
@@ -29,15 +39,6 @@ const Dashboard = () => {
             setResize={setResize}
             resize={resize}
           />
-        </Col>
-        <Col md={resize ? "11" : "9"} sm="9" className={`${style.main} md-12 `}>
-          {active.activeLink === 1 ? (
-            <AddPost />
-          ) : active.activeLink === 2 ? (
-            <User />
-          ) : (
-            ""
-          )}
         </Col>
       </Row>
     </Container>

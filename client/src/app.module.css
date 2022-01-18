@@ -1,5 +1,5 @@
 .dark {
   transition: background-color 0.5s ease;
-  background-color: #666;
+  background-color: rgb(41, 39, 53);
   color: #fff;
 }
