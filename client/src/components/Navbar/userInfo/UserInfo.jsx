@@ -10,7 +10,7 @@ const UserInfo = () => {
   const profile = useSelector((state) => state.profile);
 
   return (
-    <span className="mx-4">
+    <span className="mx-4 d-flex justify-content-center">
       <Link
         to="/user/dashboard"
         className={light ? style.userLinkDark : style.userLinkLight}

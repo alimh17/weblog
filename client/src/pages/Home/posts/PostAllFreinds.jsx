@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import { Card } from "react-bootstrap";
 import { BiDotsVerticalRounded } from "react-icons/bi";
@@ -9,8 +10,11 @@ import { friendsPostAction } from "../../../action/friendsPosts";
 import { URL } from "../../../utils/config.json";
 
 import style from "../Home.module.css";
+import PostOptions from "./components/postOptions/PostOptions";
 
 const PostAllFreinds = React.memo(({ token }) => {
+  const [showPostOption, setShowPostOption] = useState([undefined, false]);
+
   const dark = useSelector((state) => state.darkMode);
   const friends = useSelector((state) => state.friends);
 
@@ -39,13 +43,23 @@ const PostAllFreinds = React.memo(({ token }) => {
                         {f.profile.map((p) => {
                           return (
                             <>
-                              <span className={style.options}>
+                              <span
+                                className={style.options}
+                                onClick={() =>
+                                  setShowPostOption([f._id, !showPostOption[1]])
+                                }
+                              >
                                 <BiDotsVerticalRounded />
                               </span>
                               <img
                                 alt="profileImage"
                                 src={URL + p.picture.slice(6)}
                                 className={style.profileImg}
+                              />
+                              <PostOptions
+                                showPostOption={showPostOption}
+                                setShowPostOption={setShowPostOption}
+                                id={f._id}
                               />
                             </>
                           );

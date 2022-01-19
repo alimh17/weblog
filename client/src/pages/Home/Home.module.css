@@ -30,8 +30,12 @@
   align-items: center;
 }
 
+.addFriendBtn {
+  font-size: 14px;
+}
+
 .main {
-  margin-top: 5rem !important;
+  margin: 5rem 0 !important;
 }
 
 .optionBTN {

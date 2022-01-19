@@ -10,7 +10,6 @@ import style from "./Navbar.module.css";
 import DarkModeIcons from "./darkModeIcons/DarkModeIcons";
 import UserInfo from "./userInfo/UserInfo";
 import Logo from "./Logo/Logo";
-import AddPost from "./addPost/AddPost";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -23,10 +22,9 @@ const Navbar = () => {
     <Container dir="rlt" fluid className={style.navContianer}>
       <Row className={style.row}>
         <Col>
-          <div className={`${style.userInfo} d-md-flex d-none `}>
+          <div className={`${style.userInfo} d-md-flex d-none`}>
             <Setting />
             <DarkModeIcons />
-            <UserInfo />
           </div>
           <div className={`${style.barWrapper} d-flex d-md-none`}>
             <AiOutlineBars onClick={() => setShowOption(!showOption)} />
@@ -36,17 +34,25 @@ const Navbar = () => {
               }`}
             >
               <ul className=" h-100 d-flex flex-column justify-content-around align-items-center list-unstyled">
-                <li className="d-flex justify-content-between   w-100">
+                <li
+                  className="d-flex justify-content-between   w-100"
+                >
                   <p>تنظیمات</p>
                   <Setting className="mr-3" />
                 </li>
-                <li className="d-flex justify-content-between  w-100">
+                <li
+                  className="d-flex justify-content-between  w-100"
+                  onClick={() => setShowOption(false)}
+                >
                   <p>حالت شب</p>
                   <DarkModeIcons />
                 </li>
-                <li className="d-flex justify-content-between   w-100 ">
+                <li
+                  className="d-flex justify-content-between   w-100 "
+                  onClick={() => setShowOption(false)}
+                >
                   <Link
-                    to="/user"
+                    to="/user/dashboard"
                     className="text-decoration-none d-flex justify-content-between w-100"
                   >
                     اکانت
@@ -75,8 +81,8 @@ const Navbar = () => {
         <Col className={style.logoContainer}>
           <Logo />
         </Col>
-        <Col className={style.addPost}>
-          <AddPost />
+        <Col className={style.dashboard}>
+          <UserInfo />
         </Col>
       </Row>
     </Container>

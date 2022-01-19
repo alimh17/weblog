@@ -10,16 +10,14 @@
 }
 
 .userInfo {
-  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .userInfo > span {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 5rem;
 }
 
@@ -44,18 +42,8 @@
   color: #fff;
 }
 
-.userLinkDark:hover {
-  color: #fff;
-}
-.userLinkLight {
-  color: #333;
-}
-.userLinkLight:hover {
-  color: #333;
-}
-
 .setting {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   cursor: pointer;
   color: rebeccapurple;
 }
@@ -69,17 +57,17 @@
   overflow: hidden;
 }
 
-.logoContainer > span > img {
-  width: 5rem;
-  height: 5rem;
+.logoImg {
+  width: 8rem;
+  height: 8rem;
   cursor: pointer;
 }
 
-.addPost > span {
+.userInfo > span {
   width: 100%;
   height: 5rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
 }
@@ -187,5 +175,10 @@
     bottom: 0;
     width: 100%;
     z-index: 999;
+  }
+
+  .logoImg {
+    width: 6rem !important;
+    height: 6rem !important;
   }
 }

@@ -84,3 +84,9 @@
     font-size: 0.5rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin-top: 0 !important;
+  }
+}

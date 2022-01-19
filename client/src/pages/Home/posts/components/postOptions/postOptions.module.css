@@ -1,0 +1,20 @@
+.postOptionContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: absolute;
+  left: 60%;
+  top: 12%;
+  width: 8rem;
+  height: 5rem;
+  border-radius: 8px;
+}
+
+.postOptionContainer > ul > li {
+  list-style: none;
+  cursor: pointer;
+}

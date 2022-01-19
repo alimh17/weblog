@@ -12,7 +12,7 @@ const Setting = () => {
   const light = useSelector((state) => state.darkMode);
 
   return (
-    <span className="mx-4">
+    <span className="mx-4 w-25">
       <AiOutlineSetting
         className={`${style.setting} mx-2`}
         onClick={() => setSettingOption(!settingOption)}

@@ -7,8 +7,8 @@ import style from "./Home.module.css";
 import UserList from "./UserList/UserList";
 import { getFriendsAction } from "../../action/friends";
 import { useDispatch, useSelector } from "react-redux";
-import { friendsPostAction } from "../../action/friendsPosts";
 import PostAllFreinds from "./posts/PostAllFreinds";
+import { useCallback } from "react";
 
 const Home = React.memo((props) => {
   const navigate = useNavigate();
